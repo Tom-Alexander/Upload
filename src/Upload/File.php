@@ -142,7 +142,7 @@ class File extends \SplFileInfo
         $this->validations = array();
         $this->errors = array();
         $this->originalName = $_FILES[$key]['name'];
-        $this->errorCode = $_FILES[$key]['error'];
+        $this->errorCode = (int) $_FILES[$key]['error'];
         parent::__construct($_FILES[$key]['tmp_name']);
     }
 
